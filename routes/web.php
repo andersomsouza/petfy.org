@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('animal')->group(function () {
+    Route::get('{id}', 'AnimalController@index');
+    Route::get('{id}/adota', 'AnimalController@adota')->middleware('auth');
+
+});
