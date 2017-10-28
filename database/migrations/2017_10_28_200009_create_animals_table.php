@@ -22,8 +22,7 @@ class CreateAnimalsTable extends Migration
             $table->string('idade',40)->nullable();
             $table->boolean('castrado')->nullable();
             $table->boolean('vacinado')->nullable();
-            $table->integer('adocao_id',null)->nullable();
-            $table->foreign('adocao_id')->references('id')->on('adocao');
+            $table->integer('adocao_id')->default(null)->nullable();
             $table->integer('cadastrante_id')->nullable();
             $table->foreign('cadastrante_id')->references('id')->on('users');
             $table->timestamps();
