@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function animais()
+    public function animals()
     {
-        $this->hasMany("App\Animal");
+       return $this->hasMany("App\Animal");
     }
 }
