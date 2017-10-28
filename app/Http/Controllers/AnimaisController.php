@@ -10,6 +10,9 @@ class AnimaisController extends Controller
 
     public function busca()
     {
+        DB::table('animals')
+            ->whereNull('adocao_id')
+            ->get();
         return response()->json(Animal::all());
     }
 }

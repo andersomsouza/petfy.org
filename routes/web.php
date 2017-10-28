@@ -18,5 +18,16 @@ Route::get('/', function () {
 Route::prefix('animal')->group(function () {
     Route::get('{id}', 'AnimalController@index');
     Route::get('{id}/adota', 'AnimalController@adota')->middleware('auth');
-
+    Route::post('cadastra','AnimalController@cadastra')->middleware('auth');
 });
+
+Route::get('animais','AnimaisController@index');
+
+/*
+ * Rotas
+ * GET /animal/{id} -> Retorna JSON animal
+ * GET /animal/{id}/adota -> adota animal (redireciona para login se nao autenticado);
+ * GET /animal/cadastra -> recebe parametros e retorna json com error ou success
+ *
+ *
+ * */

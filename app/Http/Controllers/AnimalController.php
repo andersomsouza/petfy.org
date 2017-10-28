@@ -2,14 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use \Request;
+use App\Animal;
+use App\User;
 class AnimalController extends Controller
 {
     public function index($id){
         return 'Animal '.$id;
     }
     public function adota($id){
-        return 'Adota '.$id;
+
+    }
+
+    public function cadastra(){
+        $animal = new Animal();
+
+        $query = Request::all();
+        $animal->fill($query);
+
+        $user = Auth::user();
+        $user->animais()->save($animal);
     }
 }
