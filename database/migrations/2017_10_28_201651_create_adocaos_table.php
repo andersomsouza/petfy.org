@@ -15,9 +15,9 @@ class CreateAdocaosTable extends Migration
     {
         Schema::create('adocaos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_adotado');
-            $table->integer('id_adotante');
-            $table->integer('id_protetor');
+            $table->integer('id_adotado')->unsigned();
+            $table->integer('id_adotante')->unsigned();
+            $table->integer('id_protetor')->unsigned();
             $table->foreign('id_adotado')->references('id')->on('animals');
             $table->foreign('id_adotante')->references('id')->on('users');
             $table->foreign('id_protetor')->references('id')->on('users');
