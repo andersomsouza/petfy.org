@@ -1,17 +1,16 @@
 .header-filtro
-	grid-template-columns 45% 55%
+	grid-template-columns 43% 57%
 	a
 		img
 			float left
-		p
-			margin-left 1rem
+			height 6.4vw		
 	h2
 		color #fff
 		
 .container-filtro
-	padding 15vw 10vw
+	padding 20vw 10vw
 	width 100%
-	height 100vh
+	height 100%
 	background-color #bcbcbc
 	display grid
 	justify-items center
@@ -21,8 +20,12 @@
 	h2
 		grid-column-end span 2
 		color #000
+		margin-top 5%
 	input
 		grid-column-end span 2
+	p
+		grid-column-end span 2
+		margin 3% 0
 	button
 		grid-column-end span 2
 		width 40vw
@@ -31,11 +34,47 @@
 		border-radius 5vw 
 		border none
 		box-shadow 1px 1px 1px #888888
-	div
+	.item
 		background-color #fff
 		width 30vw
 		height 30vw
 		border-radius 50%
 		position relative
-		box-shadow 1px 1px 1px #888888
-		
+		box-shadow 2px 2px 2px #888888
+		margin-top 5%
+		img
+			position absolute
+			width 90%
+			top 50%
+			left 50%
+			transform translate(-50%,-65%)
+		h3
+			position absolute
+			bottom 0
+			left 50%
+			transform translate(-50%,-40%)	
+	.porte-grid
+		grid-column-end span 2
+		display grid
+		grid-template-columns 1fr 1fr 1fr
+		justify-items center
+		align-items center
+		div
+			width 20vw
+			height 20vw
+			margin 0 5%
+			img
+				position absolute
+				top 50%
+				left 50%
+				transform translate(-50%,-50%)
+			#pequena
+				width 40%
+			#media
+				width 50%
+			#grande
+				width 60%
+		h2
+			grid-column-end span 3
+	.selected
+		background-color #FFE082

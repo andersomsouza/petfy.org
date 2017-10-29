@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <div class="cadastrarAnimalContainer">
         <a>Carregar Imagem</a>
         <p>Você pode é 4 imagens de até 4MB cada</p>

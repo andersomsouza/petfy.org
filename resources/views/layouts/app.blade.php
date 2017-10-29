@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-    <h1>Petotas</h1>
+    <a href="/"><h1>Petotas</h1></a>
    @if(!auth()->check())
     <a href="{{url('login')}}">Entre/Cadastre-se</a>
     @else
@@ -24,5 +24,6 @@
 @yield('content')
 
 <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>
