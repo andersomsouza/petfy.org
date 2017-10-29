@@ -4,7 +4,7 @@
 
 
     <div class="cadastroAnimalContainer">
-        <img class="cadastroAnimalFoto" src="@if(empty($animal->picture)) ../img/dog.jpeg @else {{$animal->picture}} @endif" alt="Foto do animal">
+        <img class="cadastroAnimalFoto" src="@if(empty($animal->picture)) ../img/dog.jpeg @else /images/{{$animal->picture}} @endif" alt="Foto do animal">
         <div class="cadastroAnimalInformacoes">
             <div class="grid-1">
                 <p><b>Sexo</b><br>{{$animal->sexo}}</p>
