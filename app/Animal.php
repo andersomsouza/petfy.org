@@ -8,7 +8,7 @@ class Animal extends Model
 {
 
     protected $fillable = [
-        'tipo', 'sexo', 'cor', 'porte', 'idade', 'castrado', 'vacinado', 'adocao_id', 'cadastrante_id'
+        'tipo', 'sexo', 'cor', 'porte', 'idade', 'castrado', 'vacinado', 'necessidadesEspeciais'
     ];
 
 

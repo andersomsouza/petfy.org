@@ -8,7 +8,7 @@
                 <p><b>Nome</b><br>{{$protetor->name}}</p>
                 <p><b>Endereco</b><br>{{$protetor->endereco}}</p>
                 <p><b>Telefone</b><br>{{$protetor->contato}}</p>
-                <p><b>Facebook</b><br>{{$protetor->prefil}}</p>
+                <p><b>Facebook</b><br>{{$protetor->perfil}}</p>
                 <p>
                     <b>Bio</b>
                     {{$protetor->obs}}
