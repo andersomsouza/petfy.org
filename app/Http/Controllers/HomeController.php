@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Adocao;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        $adotanteAdocoes = Adocao::where('adotante_id', $user->id)->get();
+        $protetorAdocoes = Adocao::where('protetor_id', $user->id)->get();
+        $animaisCadastrados = $user->animals()->get();
+        return view('home', ['adotanteAdocoes' => $adotanteAdocoes, 'protetorAdocoes' => $protetorAdocoes, 'animaisCadastrados' => $animaisCadastrados]);
     }
 }
