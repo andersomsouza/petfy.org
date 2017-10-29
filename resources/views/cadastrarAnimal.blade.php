@@ -2,8 +2,8 @@
 @section('content')
 
     <div class="cadastrarAnimalContainer">
-        <a>Carregar Imagem</a>
-        <p>Você pode é 4 imagens de até 4MB cada</p>
+        <a id="btnCarregarImg">Carregar Imagem</a>
+        <p id="imgSelecionada"></p>
 
         <div class="especie-wrapper">
             <span class="especie">Cão</span>
@@ -43,13 +43,14 @@
         <a id="btnSubmit" class="submeter" href="#">Submeter</a>
 
     </div>
-    <form id="formCadastro" method="POST" action="{{action('AnimalController@cadastra')}}">
+    <form id="formCadastro" method="POST" enctype="multipart/form-data" action="{{action('AnimalController@cadastra')}}">
         <input id="vacinadoForm" type="hidden" name="vacinado" value="0">
         <input id="porteForm" type="hidden" name="porte" value="Médio">
         <input id="sexoForm" type="hidden" name="sexo" value="Fêmea">
         <input id="especieForm" type="hidden" name="tipo" value="Gato">
         <input id="necessidadeForm" type="hidden" name="necessidadesEspeciais" value="">
         <input id="corForm" type="hidden" name="cor" value="">
+        <input style="width: 0px; height: 0px; overflow: hidden;" type="file" name="foto" id="file-upload">
         {{csrf_field()}}
     </form>
     <script>
@@ -92,6 +93,16 @@
                 $('#corForm').val($('#cor').val());
                 $('#formCadastro').trigger('submit');
             });
+            $('#file-upload').change(function () {
+                var filepath = this.value;
+                var m = filepath.match(/([^\/\\]+)$/);
+                var filename = m[1];
+                $('#imgSelecionada').html(filename);
+
+            });
+            $('#btnCarregarImg').click(() => {
+                $('#file-upload').trigger('click');
+            })
         }
     </script>
 @endsection
