@@ -1,16 +1,19 @@
 @import 'perfilAnimal'
-@import 'index'
-@import 'pesquisaAnimal'
+@import 'filtrar'
 @import 'login'
-@import 'resultados'
+@import 'cadastrarAnimal'
 
+@font-face
+	font-family: 'Roboto'
+	src url("../fonts/Roboto-Regular.ttf")
+	
 *
 	margin 0
 	padding 0
 	box-sizing border-box
 	font-size 4.27vw
 	font-family "Roboto", 'sans-serif'
-
+	
 header
 	width 100%
 	height 15vw
@@ -24,23 +27,23 @@ header
 	align-items center
 	z-index 1
 	h1
-		color #fff
+		color #fff 
 		font-size 2rem
 	a
 		color #fff
 		text-decoration none
-
+		
 
 .principal
 	width 100vw
-	height 100vh
+	height 100vh	
 	text-align center
 	z-index 0
-	background-image url("../img/fundoMain.jpeg")
+	background-image url("../img/fundoMain.jpg")
 	background-attachment fixed
 	background-size auto 100%
 	background-position-x: -150px
-
+	
 	.container
 		width 100vw
 		height 100vh
@@ -53,36 +56,34 @@ header
 		h3
 			color #fff
 			margin-bottom 5vw
-		button
-			width 70vw
-			height 20vw
+		a.adotarBtn
+			display block
+			width 80%
+			height 60px
+			margin-left 10%
+			padding 16px 20px
+			margin-top 20px
 			color #FF6F00
-			background: white
+			background: #fff
+			text-decoration none
 			font-size 1.5rem
-			border-radius 10px
-			margin-top 5vw
-			margin-bottom 5vw
 			border none
 			border-radius 50px
 			box-shadow 1px 1px 2px gray
 			font-weight bold
-		p
-			color #fff
-		a
-			text-decoration none
+
+		a.cadastrarBtn
+			display block
+			width 80%
+			margin-left 10%
+			padding 10px 20px
+			margin-top 20px
 			color #FF6F00
-
-
-
-footer
-	width 100%
-	height 15vw
-	background-color rgba(255,255,255,0.4)
-	display grid
-	align-items center
-	justify-items center
-	z-index 1
-	color #fff
-	.indexfooter
-		position absolute
-		bottom 0
+			background: #fff
+			text-decoration none
+			font-size 1.5rem
+			border none
+			border-radius 50px
+			box-shadow 1px 1px 2px gray
+			font-weight bold	
+			

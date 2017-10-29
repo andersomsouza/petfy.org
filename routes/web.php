@@ -16,13 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/home','HomeController@index');
+Route::get('/home/cadastrar','HomeController@cadastrar');
 
 Auth::routes();
 
 Route::prefix('animal')->group(function () {
     Route::get('{id}', 'AnimalController@index');
     Route::get('{id}/adota', 'AnimalController@adota')->middleware('auth');
-    Route::post('cadastra','AnimalController@cadastra')->middleware('auth');
+    Route::post('cadastrar','AnimalController@cadastra')->middleware('auth');
 });
 
 Route::get('explorar','AnimalController@explorar');

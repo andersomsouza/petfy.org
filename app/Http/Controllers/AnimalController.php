@@ -33,5 +33,6 @@ class AnimalController extends Controller
 
         $user = Auth::user();
         $user->animais()->save($animal);
+        return action('HomeController@index');
     }
 }

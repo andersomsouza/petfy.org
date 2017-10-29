@@ -1,9 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Roboto', 'sans-serif';
-  color: #808080;
-}
 .cadastroAnimalContainer {
   display: grid;
   font-size: 20px;
@@ -80,6 +74,57 @@ button.perfilAnimal {
   -webkit-box-shadow: 1px 1px 2px #808080;
           box-shadow: 1px 1px 2px #808080;
 }
+.header-filtro {
+  grid-template-columns: 45% 55%;
+}
+.header-filtro a img {
+  float: left;
+}
+.header-filtro a p {
+  margin-left: 1rem;
+}
+.header-filtro h2 {
+  color: #fff;
+}
+.container-filtro {
+  padding: 15vw 10vw;
+  width: 100%;
+  height: 100vh;
+  background-color: #bcbcbc;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr 1fr;
+  color: #ff6f00;
+}
+.container-filtro h2 {
+  grid-column-end: span 2;
+  color: #000;
+}
+.container-filtro input {
+  grid-column-end: span 2;
+}
+.container-filtro button {
+  grid-column-end: span 2;
+  width: 40vw;
+  height: 10vw;
+  color: #ff6f00;
+  border-radius: 5vw;
+  border: none;
+  -webkit-box-shadow: 1px 1px 1px #888;
+          box-shadow: 1px 1px 1px #888;
+}
+.container-filtro div {
+  background-color: #fff;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 1px #888;
+          box-shadow: 1px 1px 1px #888;
+}
 .loginContainer {
   padding-top: 80px;
 }
@@ -105,26 +150,88 @@ img.loginbtn {
   font-size: 30px;
   color: #ff6f00;
 }
-.resultadoPesquisaAnimal {
-  display: grid;
-  font-size: 20px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  padding: 5px;
-  padding-top: 16vw;
+.cadastrarAnimalContainer {
+  margin-top: 80px;
 }
-.resultadoPesquisaAnimal .animal {
-  padding: 1%;
-  width: 100%;
+.cadastrarAnimalContainer a {
+  width: 70%;
+  display: block;
+  margin-left: 15%;
+  background-color: #ff6f00;
+  padding: 10px;
   text-align: center;
+  color: #fff;
+  font-size: 18px;
 }
-.resultadoPesquisaAnimal .animal p {
-  text-align: left;
-  padding-left: 10px;
+.cadastrarAnimalContainer p {
+  text-align: center;
+  margin-top: 10px;
+  color: #777;
 }
-.resultadoPesquisaAnimal .animal img {
-  width: 95%;
-  margin: auto;
+.especie-wrapper,
+.sexo-wrapper,
+.porte-wrapper,
+.castrado-wrapper,
+.vacinado-wrapper {
+  margin-top: 30px;
+  border: #ff6f00 3px solid;
+  width: 80%;
+  margin-left: 10%;
+}
+.especie,
+.sexo,
+.porte,
+.castrado,
+.vacinado {
+  display: inline-block;
+  width: 49%;
+  padding: 5px;
+  text-align: center;
+  margin-left: 0px;
+  color: #888;
+}
+.especie.active,
+.sexo.active,
+.castrado.active,
+.vacinado.active {
+  background: #ff6f00;
+  color: #fff;
+  width: 49.5%;
+}
+.porte {
+  width: 32%;
+}
+.porte.active {
+  width: 32%;
+  background: #ff6f00;
+  color: #fff;
+}
+.necessidades-wrapper p {
+  font-size: 15px;
+  color: #555;
+}
+.necessidades-wrapper textarea {
+  border: 3px #ff6f00 solid;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+.cor-wrapper p {
+  font-size: 15px;
+  color: #555;
+}
+.cor-wrapper textarea {
+  border: 3px #ff6f00 solid;
+  width: 80%;
+  margin-left: 10%;
+}
+.submeter {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2);
 }
 * {
   margin: 0;
@@ -163,7 +270,7 @@ header a {
   height: 100vh;
   text-align: center;
   z-index: 0;
-  background-image: url(/images/fundoMain.jpeg?455e8322975999767ce49fef5fd58e3a);
+  background-image: url(/images/fundoMain.jpg?6fed5c76a5fe56aa3c8acbdf65169504);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position-x: -150px;
@@ -183,41 +290,36 @@ header a {
   color: #fff;
   margin-bottom: 5vw;
 }
-.principal .container button {
-  width: 70vw;
-  height: 20vw;
+.principal .container a.adotarBtn {
+  display: block;
+  width: 80%;
+  height: 60px;
+  margin-left: 10%;
+  padding: 16px 20px;
+  margin-top: 20px;
   color: #ff6f00;
   background: #fff;
+  text-decoration: none;
   font-size: 1.5rem;
-  border-radius: 10px;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
   border: none;
   border-radius: 50px;
   -webkit-box-shadow: 1px 1px 2px #808080;
           box-shadow: 1px 1px 2px #808080;
   font-weight: bold;
 }
-.principal .container p {
-  color: #fff;
-}
-.principal .container a {
-  text-decoration: none;
+.principal .container a.cadastrarBtn {
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px 20px;
+  margin-top: 20px;
   color: #ff6f00;
-}
-footer {
-  width: 100%;
-  height: 15vw;
-  background-color: rgba(255,255,255,0.4);
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  z-index: 1;
-  color: #fff;
-}
-footer .indexfooter {
-  position: absolute;
-  bottom: 0;
+  background: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 2px #808080;
+          box-shadow: 1px 1px 2px #808080;
+  font-weight: bold;
 }

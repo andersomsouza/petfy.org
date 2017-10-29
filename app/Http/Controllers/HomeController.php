@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Adocao;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -30,5 +31,9 @@ class HomeController extends Controller
         $protetorAdocoes = Adocao::where('protetor_id', $user->id)->get();
         $animaisCadastrados = $user->animals()->get();
         return view('home', ['adotanteAdocoes' => $adotanteAdocoes, 'protetorAdocoes' => $protetorAdocoes, 'animaisCadastrados' => $animaisCadastrados]);
+    }
+
+    public function cadastrar(){
+       return view('cadastrarAnimal');
     }
 }
