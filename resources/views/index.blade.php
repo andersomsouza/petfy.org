@@ -3,7 +3,7 @@
 @section('content')
     <div class="principal">
         <div class="container">
-            <h2>Petotas</h2>
+            <img src="img/logo-04.png" alt="Petfy"/>
             <h3>Adote um animalzinho hoje!</h3>
             <a class="adotarBtn" href="{{action('AnimalController@filtro')}}">Quero Adotar!</a>
             <a class="cadastrarBtn" href="{{action('HomeController@cadastrar')}}">Quero botar para adoção!</a>

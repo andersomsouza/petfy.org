@@ -1,6 +1,6 @@
+@import 'rupture'
 @import 'perfilAnimal'
 @import 'filtrar'
-// @import 'login'
 @import 'login'
 @import 'cadastrarAnimal'
 @import 'resultados'
@@ -32,19 +32,30 @@ header
 	grid-template-columns 60% 40%
 	align-items center
 	z-index 1
-	h1
-		color #fff 
-		font-size 2rem
-	a
+	.logo
+		width 60%
+	.user
 		color #fff
 		text-decoration none
 		img
 			height 6.4vw
-	a > img
+	.arrow
 		float left
 		margin-top 4%
 		margin-right 5%
-		
+	+desktop()
+		height 5vw
+		padding 0 5vw
+		justify-items right
+		h1
+			font-size 1rem
+			margin-right 25px
+		a
+			font-size 1.76vw
+			img
+				height 1.76vw
+		a > img
+			display none
 		
 
 .principal
@@ -53,6 +64,9 @@ header
 	text-align center
 	z-index 0
 	background-image url("../img/fundoMain.jpeg")
+	+desktop()
+		background url("../img/cachorro_e_gato.jpg") no-repeat
+		// background-position-x 0
 	background-attachment fixed
 	background-size auto 100%
 	background-position-x: -150px
@@ -63,14 +77,20 @@ header
 		background-color rgba(5,5,5,0.7)
 		padding-top 50vw
 		text-align center
-		h2
-			font-size 4rem
-			color #fff
-			margin-bottom 5vw
+		img
+			width 90%
 		h3
 			color #fff
 			margin-bottom 5vw
 			font-weight bold
+		+desktop()
+			padding-top 15vw
+			background-color rgba(5,5,5,0.4)
+			img
+				width 50%
+			h3
+				font-size 0.5rem
+				margin-bottom 20px
 		
 				
 		a.adotarBtn
@@ -88,6 +108,12 @@ header
 			border-radius 50px
 			box-shadow 1px 1px 2px gray
 			font-weight bold
+			+desktop()
+				width 30%
+				font-size 0.5rem
+				padding 10px 15px
+				position absolute
+				left 25%
 
 		a.cadastrarBtn
 			display block
@@ -103,4 +129,10 @@ header
 			border-radius 50px
 			box-shadow 1px 1px 2px gray
 			font-weight bold	
-			
+			+desktop()
+				width 30%
+				font-size 0.5rem
+				padding 10px 15px
+				position absolute
+				top 50%
+				left 25%

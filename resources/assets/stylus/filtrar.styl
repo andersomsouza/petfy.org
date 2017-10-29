@@ -17,6 +17,8 @@
 	align-items center
 	grid-template-columns 1fr 1fr
 	color #FF6F00
+	h1
+		display none
 	h2
 		grid-column-end span 2
 		color #000
@@ -26,16 +28,42 @@
 		text-align center
 		.text
 			margin 3% 0
+		input
+			cursor pointer
+	a
+		text-decoration none
+		grid-column-end span 2
+		p
+			padding 5vw 3vw
+			color #FF6F00
+			background-color #fff
+			border-radius 5vw 
+			border none
+			box-shadow 1px 1px 1px #888888
+			margin-top 5%
+	+desktop()
+		padding 5vw 10vw
+		grid-template-columns 1fr 1fr 1fr 1fr
+		grid-row-gap 2vw
 		a
-			text-decoration none
+			grid-column-end span 4
 			p
-				padding 5vw 3vw
-				color #FF6F00
-				background-color #fff
-				border-radius 5vw 
-				border none
-				box-shadow 1px 1px 1px #888888
-				margin-top 5%
+				padding 2vw 1vw
+				border-radius 2vw
+				font-size 0.5rem
+		h2
+			font-size 0.5rem
+		h1
+			display block
+			grid-column-end span 4
+			margin-top 2vw
+			font-size 0.75rem
+		form
+			p
+				font-size 0.5rem
+				span
+					font-size 0.5rem
+		
 				
 	.item
 		background-color #fff
@@ -45,6 +73,7 @@
 		position relative
 		box-shadow 2px 2px 2px #888888
 		margin-top 5%
+		cursor pointer
 		img
 			position absolute
 			width 90%
@@ -55,7 +84,12 @@
 			position absolute
 			bottom 0
 			left 50%
-			transform translate(-50%,-40%)	
+			transform translate(-50%,-40%)
+		+desktop()
+			width 10vw
+			height 10vw
+			h3
+				font-size 0.5rem	
 	.porte-grid
 		grid-column-end span 2
 		display grid
@@ -66,6 +100,7 @@
 			width 20vw
 			height 20vw
 			margin 0 5%
+			cursor pointer
 			img
 				position absolute
 				top 50%
@@ -79,5 +114,10 @@
 				width 60%
 		h2
 			grid-column-end span 3
+		+desktop()
+			grid-column-end span 4
+			div
+				width 10vw
+				height 10vw
 	.selected
 		background-color #FFE082

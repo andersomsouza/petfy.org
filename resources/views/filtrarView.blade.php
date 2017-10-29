@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="container-filtro">
+        <h1>Filtrar</h1>
 
         <h2>O que procuras?</h2>
         <div data-value="Gato" class="item tipog selected">
@@ -42,12 +43,12 @@
         <form id="form-busca" method="GET" action="{{action('AnimalController@explorar')}}">
             <input class="range" type="range" name="seletor-idade" min="1" max="15" step="1" value="1">
             <p class="text">Aproximadamente <span class="show">1</span> ano(s)</p>
-            <a id="btnSubmit" class="submeter" href="{{action('AnimalController@filtro')}}"><p>Encontrar!</p></a>
             <input id="tipo-form" type="hidden" name="tipo" value="">
             <input id="genero-form" type="hidden" name="genero" value="">
             <input id="porte-form" type="hidden" name="porte" value="">
             <input id="idade-form" type="hidden" name="idade" value="">
         </form>
+        <a id="btnSubmit" class="submeter" href="{{action('AnimalController@filtro')}}"><p>Encontrar!</p></a>
     </div>
     <script>
         window.onload = function () {
