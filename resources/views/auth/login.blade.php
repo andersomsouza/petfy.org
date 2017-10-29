@@ -34,7 +34,7 @@
                                 </div>
                             </form>
             <div class="signupContainer">
-                <p>Ainda não possui uma conta?</p>
+                <p>Ainda não possui <uma></uma> conta?</p>
                 <h1 class="cadastro"><a href="/register">Cadastre-se!</a></h1>
             </div>
         </div>
