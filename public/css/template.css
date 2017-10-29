@@ -229,15 +229,86 @@ img.loginbtn {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-@font-face {
-  font-family: 'Roboto';
-  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2);
+.resultadoPesquisaAnimal {
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  padding: 5px;
+  padding-top: 16vw;
+}
+.resultadoPesquisaAnimal .animal {
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+}
+.resultadoPesquisaAnimal .animal p {
+  text-align: left;
+  padding-left: 10px;
+}
+.resultadoPesquisaAnimal .animal img {
+  width: 95%;
+  margin: auto;
 }
 .botaoPesquisarAnimais {
   position: fixed;
   display: inline-block;
   width: 50%;
   padding: 20%;
+}
+input:focus {
+  outline: none;
+}
+.bgLoginFormLogin {
+  background-image: url(/images/fundoMain.jpeg?455e8322975999767ce49fef5fd58e3a);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  background-position: 25% 30%;
+  height: 100vh;
+  padding: 0;
+  color: #fff;
+}
+.bgLoginFormLogin .shadow {
+  background-color: rgba(0,0,0,0.4);
+  height: 100vh;
+}
+.bgLoginFormLogin .shadow .formLogin {
+  text-align: center;
+  margin: 10px;
+}
+.bgLoginFormLogin .shadow .formLogin input {
+  border: none;
+  border-bottom: solid #ff6f00 1px;
+  line-height: 40px;
+  margin: 5px;
+  background: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2px;
+}
+.bgLoginFormLogin .shadow .formLogin input:focus {
+  border: none;
+  outline: none !important;
+  outline-offset: none !important;
+  border-bottom: solid #ff6f00 2px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.bgLoginFormLogin .shadow .formLogin button.button {
+  background-color: #ff6f00;
+  color: #fff3e0;
+  padding: 11px 55px;
+  border: none;
+  border-radius: 30px;
+  margin: 40px auto;
+  text-align: center;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2);
 }
 * {
   margin: 0;
@@ -276,7 +347,7 @@ header a {
   height: 100vh;
   text-align: center;
   z-index: 0;
-  background-image: url(/images/fundoMain.jpg?6fed5c76a5fe56aa3c8acbdf65169504);
+  background-image: url(/images/fundoMain.jpg?9a25dab988de8766261ed52e469af42d);
   background-attachment: fixed;
   background-size: auto 100%;
   background-position-x: -150px;
