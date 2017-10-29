@@ -126,6 +126,12 @@ img.loginbtn {
   width: 95%;
   margin: auto;
 }
+.botaoPesquisarAnimais {
+  position: fixed;
+  display: inline-block;
+  width: 50%;
+  padding: 20%;
+}
 * {
   margin: 0;
   padding: 0;
