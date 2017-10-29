@@ -14,7 +14,11 @@
 </head>
 <body>
 <header>
-    <a href="/"><img src="/img/left-arrow.png"></a>
+    <div class="header">
+        <a href="../"><img src="/img/left-arrow.png"></a>
+        <a href="/"><h1>Petotas</h1></a>
+    </div>
+    
    @if(!auth()->check())
     <a href="{{url('login')}}">Entre/Cadastre-se</a>
     @else

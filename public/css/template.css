@@ -425,6 +425,73 @@ input:focus {
   text-align: center;
   text-decoration: none;
 }
+.registerLara {
+  background-image: url(/images/fundoMain.jpeg?455e8322975999767ce49fef5fd58e3a);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: none;
+  background-position: 25% 30%;
+  height: 100vh;
+  padding: 0;
+  color: #fff;
+}
+.registerLara .shadow {
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 15vh;
+  height: 100vh;
+}
+.registerLara .shadow h1.registrar {
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: #ff6f00;
+  text-align: center;
+}
+.registerLara .shadow form {
+  text-align: center;
+}
+.registerLara .shadow form label {
+  display: inline-block;
+  text-align: left;
+  padding-left: 25%;
+  font-size: 18px;
+  width: 100%;
+}
+.registerLara .shadow form .help-block {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  color: rgba(190,0,0,0.9);
+}
+.registerLara .shadow form input {
+  border: none;
+  border-bottom: solid #ff6f00 1px;
+  line-height: 40px;
+  margin: 5px;
+  background: rgba(0,0,0,0);
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2px;
+}
+.registerLara .shadow form input:focus {
+  border: none;
+  outline: none !important;
+  outline-offset: none !important;
+  border-bottom: solid #ff6f00 2px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.registerLara .shadow form button.button {
+  background-color: #ff6f00;
+  color: #fff3e0;
+  padding: 11px 55px;
+  border: none;
+  border-radius: 30px;
+  margin: 40px auto;
+  text-align: center;
+}
 @font-face {
   font-family: 'Roboto';
   src: url(/fonts/Roboto-Regular.ttf?3e1af3ef546b9e6ecef9f3ba197bf7d2);
@@ -460,6 +527,14 @@ header h1 {
 header a {
   color: #fff;
   text-decoration: none;
+}
+header a img {
+  height: 6.4vw;
+}
+header a > img {
+  float: left;
+  margin-top: 4%;
+  margin-right: 5%;
 }
 .principal {
   width: 100vw;

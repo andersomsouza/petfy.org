@@ -28,7 +28,7 @@ Route::prefix('animal')->group(function () {
 
 Route::get('explorar', 'AnimalController@explorar');
 Route::get('explorar/filtro', 'AnimalController@filtro');
-// Route::post('explorar/filtro', 'AnimalController@filtro'); Arrumar para filtrar o animal!
+Route::post('explorar/filtro', 'AnimalController@filtro');
 
 Route::get('protetor/{id}', 'ProtetorController@perfil');
 /*

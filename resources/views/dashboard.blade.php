@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
     <div class="dashboardContainer">
         <h1>Adotante</h1>
