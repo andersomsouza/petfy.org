@@ -8,6 +8,12 @@ use App\User;
 
 class AnimalController extends Controller
 {
+    public function explorar()
+    {
+        $animals = Animal::with('user')->whereNull('adocao_id')->get();
+        return view('listaView', ['animals' => $animals]);
+    }
+
     public function index($id)
     {
         return view('animalView')->with(['animal' => Animal::with('user')->find($id)]);
