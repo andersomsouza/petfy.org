@@ -16,5 +16,8 @@ class Animal extends Model
        return $this->belongsTo('App\User');
 
     }
+    public function adocao(){
+        return $this->hasOne('App\Adocao','id');
+    }
 
 }
