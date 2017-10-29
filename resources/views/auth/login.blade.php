@@ -8,6 +8,7 @@
             </div>
             <form class="formLogin" method="POST" action="{{ route('login') }}">
                                 {{ csrf_field() }}
+                                        <label>E-mail</label>
                                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                         @if ($errors->has('email'))
@@ -15,7 +16,7 @@
                                                 <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                         @endif
-
+                                        <label>Senha</label>
                                         <input id="password" type="password" class="form-control" name="password" required>
 
                                         @if ($errors->has('password'))
@@ -34,7 +35,7 @@
                             </form>
             <div class="signupContainer">
                 <p>Ainda não possui uma conta?</p>
-                <h1 class="cadastro">Cadastre-se!</h1>
+                <h1 class="cadastro"><a href="/register">Cadastre-se!</a></h1>
             </div>
         </div>
     </div>
