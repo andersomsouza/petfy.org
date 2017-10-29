@@ -53,43 +53,45 @@
         {{csrf_field()}}
     </form>
     <script>
-        $('.vacinado-wrapper').click(function (event) {
-            if ($(event.target).hasClass('vacinado')) {
-                $('.vacinado-wrapper .vacinado').removeClass('active');
-                $(event.target).addClass('active');
-                $('#vacinadoForm').val($(event.target).data('value'));
-            }
-            ;
-        });
-        $('.porte-wrapper').click(function (event) {
-            if ($(event.target).hasClass('porte')) {
-                $('.porte-wrapper .porte').removeClass('active');
-                $(event.target).addClass('active');
-                $('#porteForm').val($(event.target).html());
-            }
-            ;
-        });
-        $('.sexo-wrapper').click(function (event) {
-            if ($(event.target).hasClass('sexo')) {
-                $('.sexo-wrapper .sexo').removeClass('active');
-                $(event.target).addClass('active');
-                $('#sexoForm').val($(event.target).html());
-            }
-            ;
-        });
-        $('.especie-wrapper').click(function (event) {
-            if ($(event.target).hasClass('especie')) {
-                $('.especie-wrapper .especie').removeClass('active');
-                $(event.target).addClass('active');
-                $('#especieForm').val($(event.target).html());
-            }
-            ;
-        });
-        $('#btnSubmit').click((event) => {
-            event.preventDefault();
-            $('#necessidadeForm').val($('#necessidade').val());
-            $('#corForm').val($('#cor').val());
-            $('#formCadastro').trigger('submit');
-        });
+        window.onload = function () {
+            $('.vacinado-wrapper').click(function (event) {
+                if ($(event.target).hasClass('vacinado')) {
+                    $('.vacinado-wrapper .vacinado').removeClass('active');
+                    $(event.target).addClass('active');
+                    $('#vacinadoForm').val($(event.target).data('value'));
+                }
+                ;
+            });
+            $('.porte-wrapper').click(function (event) {
+                if ($(event.target).hasClass('porte')) {
+                    $('.porte-wrapper .porte').removeClass('active');
+                    $(event.target).addClass('active');
+                    $('#porteForm').val($(event.target).html());
+                }
+                ;
+            });
+            $('.sexo-wrapper').click(function (event) {
+                if ($(event.target).hasClass('sexo')) {
+                    $('.sexo-wrapper .sexo').removeClass('active');
+                    $(event.target).addClass('active');
+                    $('#sexoForm').val($(event.target).html());
+                }
+                ;
+            });
+            $('.especie-wrapper').click(function (event) {
+                if ($(event.target).hasClass('especie')) {
+                    $('.especie-wrapper .especie').removeClass('active');
+                    $(event.target).addClass('active');
+                    $('#especieForm').val($(event.target).html());
+                }
+                ;
+            });
+            $('#btnSubmit').click((event) => {
+                event.preventDefault();
+                $('#necessidadeForm').val($('#necessidade').val());
+                $('#corForm').val($('#cor').val());
+                $('#formCadastro').trigger('submit');
+            });
+        }
     </script>
 @endsection
