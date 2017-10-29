@@ -15,7 +15,7 @@ class AnimalController extends Controller
 
     public function adota($id)
     {
-
+        return view('protetorView', ['protetor' => Animal::find($id)->user()->first()]);
     }
 
     public function cadastra()

@@ -15,7 +15,11 @@
 <body>
 <header>
     <h1>Petotas</h1>
-    <a href="#">Entre/Cadastre-se</a>
+   @if(!auth()->check())
+    <a href="{{url('login')}}">Entre/Cadastre-se</a>
+    @else
+        <a href="{{url('home')}}">Bem vindo,<br>{{auth()->user()->name}}</a>
+    @endif
 </header>
 @yield('content')
 
