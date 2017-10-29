@@ -4,8 +4,7 @@
     @php
         \Carbon\Carbon::setLocale('pt');
     @endphp
-    <div class="resultadoPesquisaAnimal"
-         >
+    <div class="resultadoPesquisaAnimal">
         @foreach($animals as $animal)
             <div class="animal" onclick="window.location.href = '{{action('AnimalController@index',['id'=>$animal->id])}}'">
                 <img src="http://placehold.it/150x150" alt="">

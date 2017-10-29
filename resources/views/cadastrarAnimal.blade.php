@@ -28,8 +28,8 @@
         </div>
 
         <div class="vacinado-wrapper">
-            <span class="vacinado">Vacinado</span>
-            <span class="vacinado active">Não Vacinado</span>
+            <span data-value="1" class="vacinado">Vacinado</span>
+            <span data-value="0" class="vacinado active">Não Vacinado</span>
         </div>
 
         <div class="necessidades-wrapper">
@@ -44,12 +44,12 @@
 
     </div>
     <form id="formCadastro" method="POST" action="{{action('AnimalController@cadastra')}}">
-        <input id="vacinadoForm" type="hidden" name="vacinado" value="Não vacinado">
+        <input id="vacinadoForm" type="hidden" name="vacinado" value="0">
         <input id="porteForm" type="hidden" name="porte" value="Médio">
         <input id="sexoForm" type="hidden" name="sexo" value="Fêmea">
         <input id="especieForm" type="hidden" name="tipo" value="Gato">
-        <input id="necessidadeForm" type="hidden" name="tipo" value="">
-        <input id="corForm" type="hidden" name="tipo" value="">
+        <input id="necessidadeForm" type="hidden" name="necessidadesEspeciais" value="">
+        <input id="corForm" type="hidden" name="cor" value="">
         {{csrf_field()}}
     </form>
     <script>
@@ -57,7 +57,7 @@
             if ($(event.target).hasClass('vacinado')) {
                 $('.vacinado-wrapper .vacinado').removeClass('active');
                 $(event.target).addClass('active');
-                $('#vacinadoForm').val($(event.target).html());
+                $('#vacinadoForm').val($(event.target).data('value'));
             }
             ;
         });
