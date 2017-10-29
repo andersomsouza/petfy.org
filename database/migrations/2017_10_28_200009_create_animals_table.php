@@ -19,13 +19,12 @@ class CreateAnimalsTable extends Migration
             $table->string('sexo')->nullable();
             $table->string('cor', 50)->nullable();
             $table->string('porte', 50)->nullable();
-            $table->string('idade', 40)->nullable();
+            $table->integer('idade')->unsigned()->nullable();
             $table->string('necessidadesEspeciais')->nullable();
             $table->boolean('castrado')->nullable();
             $table->boolean('vacinado')->nullable();
             $table->integer('adocao_id')->default(null)->nullable();
-            $table->integer('cadastrante_id')->unsigned()->nullable();
-            $table->foreign('cadastrante_id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }

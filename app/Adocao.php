@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Adocao extends Model
 {
-    //
+
     public function adotador(){
        return $this->hasOne("App\User","id_adotante","id");
     }
@@ -17,5 +17,6 @@ class Adocao extends Model
 
     public function protetor(){
        return $this->hasOne("App\User","id_protetor","id");
+
     }
 }
