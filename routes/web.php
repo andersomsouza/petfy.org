@@ -12,23 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->action('AnimalController@explorar');
 });
 
-Route::get('/home','HomeController@index');
-Route::get('/home/cadastrar','HomeController@cadastrar');
+Route::get('/home', 'HomeController@index');
+Route::get('/home/cadastrar', 'HomeController@cadastrar');
 
 Auth::routes();
 
 Route::prefix('animal')->group(function () {
     Route::get('{id}', 'AnimalController@index');
     Route::get('{id}/adota', 'AnimalController@adota')->middleware('auth');
-    Route::post('cadastrar','AnimalController@cadastra')->middleware('auth');
+    Route::post('cadastrar', 'AnimalController@cadastra')->middleware('auth');
 });
 
-Route::get('explorar','AnimalController@explorar');
+Route::get('explorar', 'AnimalController@explorar');
 
-Route::get('protetor/{id}','ProtetorController@perfil');
+Route::get('protetor/{id}', 'ProtetorController@perfil');
 /*
  * Rotas
  * GET /animal/{id} -> Retorna JSON animal

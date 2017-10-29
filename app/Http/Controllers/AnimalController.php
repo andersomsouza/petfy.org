@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use \Request;
 use App\Animal;
 use App\User;
@@ -32,7 +33,7 @@ class AnimalController extends Controller
         $animal->fill($query);
 
         $user = Auth::user();
-        $user->animais()->save($animal);
-        return action('HomeController@index');
+        $user->animals()->save($animal);
+        redirect()->action('HomeController@index');
     }
 }
