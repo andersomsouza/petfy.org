@@ -25,7 +25,7 @@ Route::prefix('animal')->group(function () {
     Route::post('cadastra','AnimalController@cadastra')->middleware('auth');
 });
 
-Route::get('animais','AnimaisController@index');
+Route::get('animais','AnimaisController@busca');
 
 /*
  * Rotas

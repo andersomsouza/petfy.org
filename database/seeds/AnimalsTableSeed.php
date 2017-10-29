@@ -18,6 +18,7 @@ class AnimalsTableSeed extends Seeder
         Log::info('Adicionando no user: '.var_dump($user));
         $animal = new Animal();
         $animal->tipo = "Gato";
+        $animal->idade = 5;
         $animal->sexo = "Macho";
         $animal->porte = "Pequeno";
         $animal->cor = "Mesclado";
