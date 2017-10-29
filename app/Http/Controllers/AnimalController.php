@@ -34,6 +34,10 @@ class AnimalController extends Controller
 
         $user = Auth::user();
         $user->animals()->save($animal);
-        redirect()->action('HomeController@index');
+       return redirect()->action('HomeController@index');
+    }
+
+    public function filtro(){
+        return view('filtrarView');
     }
 }
