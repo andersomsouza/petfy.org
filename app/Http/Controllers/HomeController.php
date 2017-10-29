@@ -30,7 +30,7 @@ class HomeController extends Controller
         $adotanteAdocoes = Adocao::where('adotante_id', $user->id)->get();
         $protetorAdocoes = Adocao::where('protetor_id', $user->id)->get();
         $animaisCadastrados = $user->animals()->get();
-        return view('home', ['adotanteAdocoes' => $adotanteAdocoes, 'protetorAdocoes' => $protetorAdocoes, 'animaisCadastrados' => $animaisCadastrados]);
+        return view('dashboard', ['adotanteAdocoes' => $adotanteAdocoes, 'protetorAdocoes' => $protetorAdocoes, 'animaisCadastrados' => $animaisCadastrados]);
     }
 
     public function cadastrar(){

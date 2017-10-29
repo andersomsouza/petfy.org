@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect()->action('AnimalController@explorar');
+    return view('index');
 });
 
 Route::get('/home', 'HomeController@index');
