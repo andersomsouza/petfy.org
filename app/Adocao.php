@@ -8,15 +8,14 @@ class Adocao extends Model
 {
     //
     public function adotador(){
-        $this->hasOne("App\User");
-        $this->hasOne("App\User","id_adotante","id");
+       return $this->hasOne("App\User","id_adotante","id");
     }
 
     public function animal(){
-        $this->hasOne("App\Animal","id_adotado");
+       return $this->hasOne("App\Animal","id_adotado");
     }
 
     public function protetor(){
-        $this->hasOne("App\User","id_protetor","id");
+       return $this->hasOne("App\User","id_protetor","id");
     }
 }

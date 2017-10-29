@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'endereco', 'contato','perfil','picture','obs','ranking'
     ];
 
     /**
@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function animais()
+    public function animals()
     {
-        $this->hasMany("App\Animal");
+       return $this->hasMany("App\Animal");
     }
 }
