@@ -27,6 +27,7 @@ Route::prefix('animal')->group(function () {
 
 Route::get('animais','AnimaisController@busca');
 
+Route::get('protetor/{id}','ProtetorController@perfil');
 /*
  * Rotas
  * GET /animal/{id} -> Retorna JSON animal

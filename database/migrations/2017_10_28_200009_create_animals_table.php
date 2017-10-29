@@ -21,6 +21,7 @@ class CreateAnimalsTable extends Migration
             $table->string('porte', 50)->nullable();
             $table->integer('idade')->unsigned()->nullable();
             $table->string('necessidadesEspeciais')->nullable();
+            $table->string('picture')->nullable();
             $table->boolean('castrado')->nullable();
             $table->boolean('vacinado')->nullable();
             $table->integer('adocao_id')->default(null)->nullable();

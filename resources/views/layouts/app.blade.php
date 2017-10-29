@@ -13,13 +13,12 @@
     <link href="{{ asset('css/template.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Petotas</h1>
-    </header>
+<header>
+    <h1>Petotas</h1>
+    <a href="#">Entre/Cadastre-se</a>
+</header>
+@yield('content')
 
-        @yield('content')
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<!-- Scripts -->
 </body>
 </html>

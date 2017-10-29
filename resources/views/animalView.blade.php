@@ -1,32 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
-    <header>
-        <h1>Petotas</h1>
-        <a href="#">Entre/Cadastre-se</a>
-    </header>
+
 
     <div class="cadastroAnimalContainer">
-        <img class="cadastroAnimalFoto" src="../img/dog.jpeg" alt="Foto do animal">
+        <img class="cadastroAnimalFoto" src="@if(empty($animal->picture)) ../img/dog.jpeg @else {{$animal->picture}} @endif" alt="Foto do animal">
         <div class="cadastroAnimalInformacoes">
             <div class="grid-1">
-                <p><b>Sexo</b><br>Fêmea</p>
-                <p><b>Cor</b><br>Mesclado</p>
-                <p><b>Porte</b><br>Grande</p>
+                <p><b>Sexo</b><br>{{$animal->sexo}}</p>
+                <p><b>Cor</b><br>{{$animal->cor}}</p>
+                <p><b>Porte</b><br>{{$animal->porte}}</p>
             </div>
             <div class="grid-2">
-                <p><b>Idade</b><br>2 anos</p>
-                <p><b>Castrado</b><br>Sim</p>
-                <p><b>Vacinado</b><br>Desconhecido</p>
+                <p><b>Idade</b><br>{{$animal->idade}} Anos</p>
+                <p><b>Castrado</b><br>@if($animal->castrado)Sim @else Não @endif</p>
+                <p><b>Vacinado</b><br>@if($animal->vacinado)Sim @else Não @endif</p>
             </div>
             <div class="grid-3">
                 <b>Necesidades Especiais</b>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    {{$animal->necessidadesEspeciais}}
                 </p>
             </div>
         </div>
 
-        <button class="perfilAnimal" type="button">Quero Adotar</button>
+        <button class="perfilAnimal"  onclick="window.location.href = '{{action('AnimalController@adota', ['id' => $animal->id])}}'" type="button">Quero Adotar</button>
     </div>
 @endsection
