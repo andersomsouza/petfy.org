@@ -1,3 +1,4 @@
 {
-    "/css/template.css": "/css/template.css"
+    "/js/app.js": "/js/app.js",
+    "/vue-styles.css": "/vue-styles.css"
 }

@@ -13,8 +13,12 @@ let mix = require('laravel-mix');
 
 //mix.js('resources/assets/js/filtrar.js', 'public/js')
 //   .sass('resources/assets/sass/app.scss', 'public/css');
-mix.stylus('resources/assets/stylus/template.styl','public/css/template.css',{
+mix.js('resources/assets/js/app.js','public/js')
+    .options({ extractVueStyles: true })
+    .browserSync('localhost:8000');
+   /** .stylus('resources/assets/stylus/template.styl','public/css/template.css',{
     use: [
         require('rupture')()
     ]
-});
+    })
+    **/
