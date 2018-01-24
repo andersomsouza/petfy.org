@@ -1,5 +1,5 @@
 import 'reset-css';
-import '../../../node_modules/materialize-css/dist/css/materialize.css';
+import 'materialize-css/dist/css/materialize.css';
 
 
 import Vue from 'vue';

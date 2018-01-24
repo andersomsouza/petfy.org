@@ -17,9 +17,7 @@
                 </div>
             </div>
         </div>
-        <div>
-            <div class="filtrar-btn">Filtrar</div>
-        </div>
+        <petfy-filtro></petfy-filtro>
     </div>
 
 
@@ -28,6 +26,7 @@
 
 <script>
     import Animal from '../../domain/animal/Animal';
+    import BtnFiltrar from '../shared/btn-filtrar/BtnFiltrar'
 
     export default {
         name: "explorar",
@@ -35,21 +34,14 @@
             return {
                 animais: []
             }
+        },
+        components: {
+            'petfy-filtro':BtnFiltrar
         }
     }
 </script>
 
 <style scoped>
-    .filtrar-btn{
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 16px;
-        background: #ff6f00;
-        padding: 16px;
-        color: white;
-        border-radius: 22px;
-    }
+
 
 </style>
