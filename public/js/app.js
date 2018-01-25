@@ -25520,7 +25520,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -25564,9 +25564,9 @@ module.exports = function listToStyles (parentId, list) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__domain_animal_Animal__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_btn_filtrar_BtnFiltrar__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_btn_filtrar_BtnFiltrar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__shared_btn_filtrar_BtnFiltrar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__domain_animal_Animal_js__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_filtro_explorar_FiltroExplorar__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_filtro_explorar_FiltroExplorar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__shared_filtro_explorar_FiltroExplorar__);
 //
 //
 //
@@ -25597,16 +25597,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+var animal = new __WEBPACK_IMPORTED_MODULE_0__domain_animal_Animal_js__["a" /* default */]();
+animal.descricao = "Um pet fofinho";
+animal.foto = "http://via.placeholder.com/350x350";
+
+var animais = [];
+for (var i = 0; i < 5; i++) {
+    animais.push(animal);
+}
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "explorar",
     data: function data() {
         return {
-            animais: [0, 1, 2, 3, 4]
+            animais: animais
         };
     },
 
     components: {
-        'petfy-filtro': __WEBPACK_IMPORTED_MODULE_1__shared_btn_filtrar_BtnFiltrar___default.a
+        'petfy-filtro': __WEBPACK_IMPORTED_MODULE_1__shared_filtro_explorar_FiltroExplorar___default.a
     }
 });
 
@@ -25615,13 +25623,63 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Animal = function Animal() {
-    _classCallCheck(this, Animal);
-};
+var Animal = function () {
+    function Animal() {
+        var descricao = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+        var foto = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+        var idade = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+        var porte = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "";
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Animal);
+        _classCallCheck(this, Animal);
+
+        this._descricao = descricao;
+        this._foto = foto;
+        this._idade = idade;
+        this._porte = porte;
+    }
+
+    _createClass(Animal, [{
+        key: "foto",
+        get: function get() {
+            return this._foto;
+        },
+        set: function set(value) {
+            this._foto = value;
+        }
+    }, {
+        key: "descricao",
+        get: function get() {
+            return this._descricao;
+        },
+        set: function set(value) {
+            this._descricao = value;
+        }
+    }, {
+        key: "idade",
+        get: function get() {
+            return this._idade;
+        },
+        set: function set(value) {
+            this._idade = value;
+        }
+    }, {
+        key: "porte",
+        get: function get() {
+            return this._porte;
+        },
+        set: function set(value) {
+            this._porte = value;
+        }
+    }]);
+
+    return Animal;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Animal);
 
 /***/ }),
 /* 35 */
@@ -25642,7 +25700,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4310ed21"
+var __vue_scopeId__ = "data-v-841e89e2"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -25653,7 +25711,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\shared\\btn-filtrar\\BtnFiltrar.vue"
+Component.options.__file = "resources\\assets\\js\\components\\shared\\filtro-explorar\\FiltroExplorar.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -25662,9 +25720,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4310ed21", Component.options)
+    hotAPI.createRecord("data-v-841e89e2", Component.options)
   } else {
-    hotAPI.reload("data-v-4310ed21", Component.options)
+    hotAPI.reload("data-v-841e89e2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -25685,13 +25743,13 @@ var content = __webpack_require__(37);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("f6c8b8fe", content, false);
+var update = __webpack_require__(1)("1b7c3bb4", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4310ed21\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./BtnFiltrar.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4310ed21\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./BtnFiltrar.vue");
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-841e89e2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./FiltroExplorar.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-841e89e2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./FiltroExplorar.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -25709,7 +25767,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\ninput[type=checkbox]:checked + label[data-v-4310ed21]{\n    filter: grayscale(100%);\n}\n.teste-class[data-v-4310ed21]{\n    height: 50px;\n}\n.lista-itens[data-v-4310ed21]{\n    display: flex;\n    flex-flow: row nowrap;\n    align-items: center;\n    align-content: space-between;\n}\n.lista-tamanho[data-v-4310ed21]{\n    margin-left: -20px;\n}\nfixed-action-btn[data-v-4310ed21] {\n    right:50px;\n}\n\n", ""]);
+exports.push([module.i, "\ninput[type=checkbox]:checked + label[data-v-841e89e2] {\n    filter: grayscale(100%);\n}\n.filtro-petfy[data-v-841e89e2] {\n    width: 100%;\n\n    position: fixed;\n    bottom: 0px;\n    background-color: white;\n}\n.lista-itens[data-v-841e89e2] {\n    display: flex;\n    flex-flow: row nowrap;\n    align-items: center;\n    align-content: space-between;\n}\n.filtro-content[data-v-841e89e2]{\n\n    transition: 0.5s;\n}\n.collapse[data-v-841e89e2]{\n    height: 0;\n    opacity: 0;\n}\nul[data-v-841e89e2] {\n\n    display: flex;\n    flex-flow:  row wrap;\n    justify-content: space-around;\n}\nfieldset[data-v-841e89e2]{\n    margin-top:15px;\n    border-radius: 15px;\n    background-color: rgba(200,200,200,0.3);\n}\n.filtro-button[data-v-841e89e2]{\n    background-color: #FF6F00;\n    color:white;\n    height: 30px;\n    text-align: center;\n}\n.filtro-button p[data-v-841e89e2] {\n    top: 50%;\n    position: relative;\n    transform: translateY(-50%);\n}\n\n\n", ""]);
 
 // exports
 
@@ -25750,21 +25808,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
+var filtroEl = void 0;
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "btn-filtrar",
     components: {
         "petfy-img-select": __WEBPACK_IMPORTED_MODULE_2__img_select_ImgSelect___default.a
     },
+    mounted: function mounted() {
+        filtroEl = document.querySelector('.filtro-content');
+        console.log(filtroEl);
+    },
+
     methods: {
-        openToolbar: function openToolbar() {
-            __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.fixed-action-btn.toolbar').openFAB();
+        toggleFiltro: function toggleFiltro() {
+            if (filtroEl.classList.contains('collapse')) {
+                filtroEl.classList.remove('collapse');
+            } else {
+                filtroEl.classList.add('collapse');
+            }
         }
     }
-
 });
 
 /***/ }),
@@ -38577,7 +38662,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.item-wrapper[data-v-d643a80e]{\n    margin: 5px;\n}\n.inativo[data-v-d643a80e]{\n    filter: grayscale(100%);\n}\n", ""]);
+exports.push([module.i, "\n.item-wrapper[data-v-d643a80e]{\n    margin: 5px;\n    background: limegreen;\n    border-radius: 50%;\n    padding: 5px;\n}\n.inativo[data-v-d643a80e]{\n    filter: grayscale(100%);\n}\nimg[data-v-d643a80e]{\n    max-height: 30px;\n\n    width: auto;\n}\n", ""]);
 
 // exports
 
@@ -38608,7 +38693,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         toggleEstado: function toggleEstado(event) {
             this.estado = !this.estado;
             var imagem = event.target;
-            if (this.estado) {
+            if (!this.estado) {
                 imagem.classList.add('inativo');
             } else {
                 imagem.classList.contains('inativo') ? imagem.classList.remove('inativo') : '';
@@ -38661,100 +38746,99 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "filtro-petfy" }, [
     _c(
       "div",
       {
-        staticClass: "fixed-action-btn",
+        staticClass: "filtro-button",
         on: {
-          mouseover: function($event) {
-            _vm.openToolbar()
+          click: function($event) {
+            _vm.toggleFiltro()
           }
         }
       },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("form", { attrs: { action: "" } }, [
-              _c(
-                "div",
-                { staticClass: "lista-itens lista-tamanho" },
-                [
-                  _c("petfy-img-select", {
-                    attrs: { img: "/img/dog-paw-p.png" }
-                  }),
-                  _vm._v(" "),
-                  _c("petfy-img-select", {
-                    attrs: { img: "/img/dog-paw-m.png" }
-                  }),
-                  _vm._v(" "),
-                  _c("petfy-img-select", {
-                    attrs: { img: "/img/dog-paw-g.png" }
-                  })
-                ],
-                1
-              )
-            ])
+      [_c("p", [_vm._v("Filtros")])]
+    ),
+    _vm._v(" "),
+    _c("ul", { staticClass: "filtro-content collapse" }, [
+      _c("li", [
+        _c("fieldset", [
+          _c("legend", [
+            _vm._v("\n                    Espécie\n                ")
           ]),
           _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3)
+          _c(
+            "div",
+            { staticClass: "lista-itens lista-pet" },
+            [
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/caoIcon.png" }
+              }),
+              _vm._v(" "),
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/gatoIcon.png" }
+              })
+            ],
+            1
+          )
         ])
-      ]
-    )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("fieldset", [
+          _c("legend", [_vm._v("Sexo")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "lista-itens lista-sexo" },
+            [
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/maleIcon.png" }
+              }),
+              _vm._v(" "),
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/femaleIcon.png" }
+              })
+            ],
+            1
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("fieldset", [
+          _c("legend", [_vm._v("Porte")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "lista-itens lista-tamanho" },
+            [
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/dog-paw-p.png" }
+              }),
+              _vm._v(" "),
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/dog-paw-m.png" }
+              }),
+              _vm._v(" "),
+              _c("petfy-img-select", {
+                attrs: { img: "/img/icons/dog-paw-g.png" }
+              })
+            ],
+            1
+          )
+        ])
+      ])
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "btn-floating btn-large red" }, [
-      _c("i", { staticClass: "large material-icons" }, [_vm._v("mode_edit")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { staticClass: "btn-floating yellow darken-1" }, [
-        _c("i", { staticClass: "material-icons" }, [_vm._v("format_quote")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { staticClass: "btn-floating green" }, [
-        _c("i", { staticClass: "material-icons" }, [_vm._v("publish")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("a", { staticClass: "btn-floating blue" }, [
-        _c("i", { staticClass: "material-icons" }, [_vm._v("attach_file")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4310ed21", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-841e89e2", module.exports)
   }
 }
 
@@ -38773,7 +38857,21 @@ var render = function() {
         "div",
         { staticClass: "row" },
         _vm._l(_vm.animais, function(animal) {
-          return _c("div", { staticClass: "col s12 m6 l6" }, [_vm._m(0, true)])
+          return _c("div", { staticClass: "col s12 m6 l6" }, [
+            _c("div", { staticClass: "card horizontal" }, [
+              _c("div", { staticClass: "card-image" }, [
+                _c("img", { attrs: { src: animal.foto } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-stacked" }, [
+                _c("div", { staticClass: "card-content" }, [
+                  _c("p", [_vm._v(_vm._s(animal.descricao))])
+                ]),
+                _vm._v(" "),
+                _vm._m(0, true)
+              ])
+            ])
+          ])
         })
       ),
       _vm._v(" "),
@@ -38787,20 +38885,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card horizontal" }, [
-      _c("div", { staticClass: "card-image" }, [
-        _c("img", { attrs: { src: "http://via.placeholder.com/350x350" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-stacked" }, [
-        _c("div", { staticClass: "card-content" }, [
-          _c("p", [_vm._v("Descrição cachorrinho fofinho.")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-action" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Quero adotar!")])
-        ])
-      ])
+    return _c("div", { staticClass: "card-action" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Quero adotar!")])
     ])
   }
 ]
@@ -39015,7 +39101,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\nheader[data-v-6163d8c8] {\n    background-color: #FF6F00;\n}\n.logo[data-v-6163d8c8] {\n    height: 42px;\n}\n", ""]);
+exports.push([module.i, "\n.nav-wrapper[data-v-6163d8c8] {\n    background-color: #FF6F00;\n}\n.logo[data-v-6163d8c8] {\n    height: 42px;\n    margin-top: 5px;\n}\n\n", ""]);
 
 // exports
 
@@ -39026,6 +39112,14 @@ exports.push([module.i, "\nheader[data-v-6163d8c8] {\n    background-color: #FF6
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -39053,11 +39147,21 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("header", [
-      _c("a", { attrs: { href: "/" } }, [
-        _c("img", {
-          staticClass: "logo",
-          attrs: { src: "/img/logo-08.png", alt: "Petify" }
-        })
+      _c("nav", [
+        _c("div", { staticClass: "nav-wrapper" }, [
+          _c("a", { staticClass: "brand-logo left ", attrs: { href: "/" } }, [
+            _c("img", {
+              staticClass: "logo",
+              attrs: { src: "/img/logo-08.png", alt: "Petfy" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "right " }, [
+            _c("li", [
+              _c("a", { attrs: { href: "" } }, [_vm._v("Login/Cadastre-se")])
+            ])
+          ])
+        ])
       ])
     ])
   }

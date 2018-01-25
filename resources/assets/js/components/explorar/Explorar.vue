@@ -26,7 +26,7 @@
 
 <script>
     import Animal from '../../domain/animal/Animal.js';
-    import BtnFiltrar from '../shared/btn-filtrar/BtnFiltrar'
+    import FiltroExplorar from '../shared/filtro-explorar/FiltroExplorar'
 
     let animal = new Animal();
     animal.descricao = "Um pet fofinho";
@@ -44,7 +44,7 @@
             }
         },
         components: {
-            'petfy-filtro':BtnFiltrar
+            'petfy-filtro':FiltroExplorar
         }
     }
 </script>
