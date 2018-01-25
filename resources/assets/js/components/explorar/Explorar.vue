@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m6 l6"  v-for="animal of animais">
                 <div class="card horizontal">
                     <div class="card-image">
                         <img src="http://via.placeholder.com/350x350">
@@ -32,7 +32,7 @@
         name: "explorar",
         data() {
             return {
-                animais: []
+                animais: [0,1,2,3,4]
             }
         },
         components: {

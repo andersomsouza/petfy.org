@@ -7,8 +7,11 @@
             <ul>
                 <li>
                     <form action="">
-                        <div>
-                            <petfy-img-select  img="/img/dog-paw-g.png"></petfy-img-select></div>
+                        <div class="lista-itens lista-tamanho">
+                            <petfy-img-select  img="/img/dog-paw-p.png"></petfy-img-select>
+                            <petfy-img-select  img="/img/dog-paw-m.png"></petfy-img-select>
+                            <petfy-img-select  img="/img/dog-paw-g.png"></petfy-img-select>
+                        </div>
                     </form>
                 </li>
                 <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
@@ -43,6 +46,20 @@
     }
     .teste-class{
         height: 50px;
+    }
+    .lista-itens{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        align-content: space-between;
+
+    }
+    .lista-tamanho{
+        margin-left: -20px;
+    }
+
+    fixed-action-btn {
+        right:50px;
     }
 
 </style>
