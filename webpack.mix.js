@@ -15,6 +15,7 @@ let mix = require('laravel-mix');
 //   .sass('resources/assets/sass/app.scss', 'public/css');
 mix.js('resources/assets/js/app.js','public/js')
     //.options({ extractVueStyles: true })
+    .copyDirectory('resources/assets/img', 'public/img')
     .browserSync('localhost:8000');
    /** .stylus('resources/assets/stylus/template.styl','public/css/template.css',{
     use: [
