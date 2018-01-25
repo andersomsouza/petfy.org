@@ -17,7 +17,7 @@
             toggleEstado(event) {
                 this.estado = !this.estado;
                 let imagem = event.target;
-                if(this.estado){
+                if(!this.estado){
                     imagem.classList.add('inativo')
                 }else{
                     imagem.classList.contains('inativo')?imagem.classList.remove('inativo'): '';
@@ -36,8 +36,16 @@
 <style scoped>
     .item-wrapper{
         margin: 5px;
+        background: limegreen;
+        border-radius: 50%;
+        padding: 5px;
     }
     .inativo{
         filter: grayscale(100%);
+    }
+    img{
+        max-height: 30px;
+
+        width: auto;
     }
 </style>

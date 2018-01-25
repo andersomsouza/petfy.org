@@ -4,11 +4,11 @@
             <div class="col s12 m6 l6"  v-for="animal of animais">
                 <div class="card horizontal">
                     <div class="card-image">
-                        <img src="http://via.placeholder.com/350x350">
+                        <img :src="animal.foto">
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p>Descrição cachorrinho fofinho.</p>
+                            <p>{{ animal.descricao }}</p>
                         </div>
                         <div class="card-action">
                             <a href="#">Quero adotar!</a>
@@ -25,14 +25,22 @@
     </template>
 
 <script>
-    import Animal from '../../domain/animal/Animal';
+    import Animal from '../../domain/animal/Animal.js';
     import BtnFiltrar from '../shared/btn-filtrar/BtnFiltrar'
 
+    let animal = new Animal();
+    animal.descricao = "Um pet fofinho";
+    animal.foto = "http://via.placeholder.com/350x350";
+
+    let animais = [];
+    for (let i = 0; i < 5 ;i++){
+        animais.push(animal);
+    }
     export default {
         name: "explorar",
         data() {
             return {
-                animais: [0,1,2,3,4]
+                animais
             }
         },
         components: {
