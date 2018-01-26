@@ -52,7 +52,8 @@
         },
         mounted(){
             filtroEl = document.querySelector('.filtro-content');
-            console.log(filtroEl)
+            console.log(filtroEl);
+
         }
         ,
         methods: {
@@ -89,12 +90,13 @@
 
     }
     .filtro-content{
-
-        transition: 0.5s;
+    overflow: hidden;
+        max-height: 100vh;
+        transition: max-height 0.5s;
     }
     .collapse{
-        height: 0;
-        opacity: 0;
+        max-height: 0;
+       // opacity: 0;
     }
 
     ul {
@@ -105,6 +107,7 @@
     }
     fieldset{
         margin-top:15px;
+        margin-bottom: 15px;
         border-radius: 15px;
         background-color: rgba(200,200,200,0.3);
 
