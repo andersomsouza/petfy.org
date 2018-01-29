@@ -1,9 +1,11 @@
 <template>
-    <div class="col s12 m6" >
+    <div class="card-wrapper" >
 
         <div class="card">
             <div class="card-image">
-                <img :src="imgLoad" v-show="carregado">
+                <div class="img-wrapper">
+                    <img :src="imgLoad" v-show="carregado">
+                </div>
                 <a class="btn-floating halfway-fab waves-effect waves-light red" @click="remove"><i class="material-icons">remove</i></a>
             </div>
             <div class="card-content">
@@ -45,12 +47,32 @@
 </script>
 
 <style scoped>
-    div,img{
-        width: 100%;
-    }
     p{
         text-overflow:ellipsis;
         white-space:nowrap;
         overflow:hidden;
+    }
+    .card-wrapper{
+        flex: 0 0 auto;
+        width: 50vw;
+    }
+    .card {
+        margin: 5px;
+    }
+    img{
+        height: 100%;
+        width: auto !important;
+        position: relative;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+    .img-wrapper{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .card-image{
+        height: 50vw;
+        width:100%;
     }
 </style>
