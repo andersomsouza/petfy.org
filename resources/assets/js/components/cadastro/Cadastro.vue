@@ -1,9 +1,11 @@
 <template>
     <div>
         <div id="dragFotos" v-petfy-dragzone="fotos">
+
             <p>Arraste suas fotos ou click aqui</p>
         </div>
         <div>
+
             <div class="row">
                 <div v-for="foto in fotos">
                     <petfy-img-drag :arquivo="foto" :key="foto.name" @remove="remove"></petfy-img-drag>
